@@ -1,0 +1,134 @@
+﻿Department of Computer Engineering
+                                       Subject Name: Artificial Intelligence 
+
+
+Practical No. 1
+Title:
+Design and Implement a Simple Reflex Agent for the Vacuum Cleaner World and Analyze Its Rational Behavior in a Given Environment
+Aim
+To design and implement a Simple Reflex Agent for the Vacuum Cleaner World and analyze its rational behavior based on the current percept of the environment.
+Objectives
+1. To understand the concept of an intelligent agent.
+2. To understand the working of a Simple Reflex Agent.
+3. To implement a Vacuum Cleaner Agent using Python.
+4. To analyze the agent's actions for different environmental conditions.
+5. To understand the concept of rational behavior of an AI agent.
+________________
+
+
+ Theory:
+What is an Intelligent Agent?
+An intelligent agent is a system that perceives its environment through sensors and performs actions through actuators to achieve a goal.
+Basic structure:
+Environment → Sensors → Agent → Actuators → Environment
+For a vacuum cleaner:
+* Sensors: Detect the current location and whether the floor is clean or dirty.
+* Agent: Decides what action to perform.
+* Actuators: Move the vacuum cleaner or perform cleaning.
+* Environment: Rooms/floor locations containing clean or dirty surfaces.
+________________
+
+
+
+
+ Vacuum Cleaner World
+Consider a simple environment containing two locations:
+* Location A
+* Location B
+Each location can have one of two states:
+* Clean
+* Dirty
+The vacuum cleaner can perform the following actions:
+Condition
+	  Action
+	Current location is Dirty                              -
+	       Suck
+	Current location is Clean and agent is at A
+	    -  Move Right
+	Current location is Clean and agent is at B
+	      - Move Left
+	Example
+Suppose the initial environment is:
+Location
+	Status
+	A
+	Dirty
+	B
+	Dirty
+	Agent starts at A.
+The agent performs:
+A Dirty → Suck → A Clean → Move Right → B Dirty → Suck → B Clean
+Thus, the agent cleans both locations.
+________________
+
+
+Simple Reflex Agent
+A Simple Reflex Agent selects an action based only on the current percept.
+It uses condition-action rules:
+IF condition THEN action
+For example:
+* IF current location is dirty → Suck
+* IF current location is clean and agent is at A → Move Right
+* IF current location is clean and agent is at B → Move Left
+The agent does not maintain a detailed history of previous states.
+________________
+
+
+ PEAS Description
+PEAS stands for:
+P – Performance Measure
+E – Environment
+A – Actuators
+S – Sensors
+Component
+	Vacuum Cleaner Agent
+	Performance Measure
+	Maximum cleanliness, minimum unnecessary movement, minimum time/energy
+	Environment
+	Two-room environment: A and B
+	Actuators
+	Suck, Move Left, Move Right
+	Sensors
+	Current location and cleanliness status
+	________________
+
+
+  
+ 
+Algorithm
+Algorithm: Simple Reflex Vacuum Cleaner Agent
+Step 1: Start.
+Step 2: Define the environment with two locations A and B.
+Step 3: Set the initial position of the vacuum cleaner.
+Step 4: Read the current location and its cleanliness status.
+Step 5: If the current location is dirty, perform Suck.
+Step 6: If the current location is clean:
+* If the agent is at A, move to B.
+* If the agent is at B, move to A.
+Step 7: Update the environment after every action.
+Step 8: Repeat the process for a specified number of steps.
+Step 9: Display the actions performed and final environment.
+Step 10: Stop.
+________________
+
+
+Program-
+Output-
+Conclusion-
+
+
+13. Viva Questions
+1. What is an intelligent agent?
+2. What is a Simple Reflex Agent?
+3. What is the difference between an agent and an environment?
+4. What are sensors and actuators?
+5. What is PEAS?
+6. What is the performance measure for a vacuum cleaner agent?
+7. Why is the vacuum cleaner considered an intelligent agent?
+8. What is meant by rational behavior?
+9. What are the limitations of a Simple Reflex Agent?
+10. How is a Model-Based Reflex Agent different from a Simple Reflex Agent?
+11. Can a Simple Reflex Agent remember previous actions?
+12. What happens if both rooms are clean?
+13. Why is if-elif-else used in this implementation?
+14. What are the possible percepts in the Vacuum Cleaner World?
