@@ -1,16 +1,11 @@
 from numpy import array
  
- 
-#main function
-#beta here is width of beam and distances can be considered as weights.
 
 def beam_search(distances, beta):
    
- #initialising some record
+
     paths_so_far = [[list(), 0]]  
-  
-     
-    #traverse through the neighbouring vertices row by row.
+      
 
     for idx, tier in enumerate(distances):
         if idx > 0:
